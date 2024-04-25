@@ -34,10 +34,19 @@ BaselineOfNewToolsDocumentBrowser >> baseline: spec [
 				with: [ spec requires: #( #'NewTools-DocumentBrowser' ) ].
 
 		spec
-			group: 'Core' with: #(#'Microdown-RichTextPresenter' #'NewTools-DocumentBrowser');
-			group: 'Tests' with: #('Core' #'Microdown-RichTextPresenter-Tests' #'NewTools-DocumentBrowser-Tests' );
-			group: 'RichTextPresenter' with: #(#'Microdown-RichTextPresenter' #'Microdown-RichTextPresenter-Tests');
-			group: 'GitHubResource' with: #(#'NewTools-DocumentBrowser-GitHubResource' #'NewTools-DocumentBrowser-GitHubResource-Tests');
+			group: 'Core' with: #(
+				'Microdown-RichTextPresenter' 
+				'NewTools-DocumentBrowser');
+			group: 'Tests' with: #(
+				'Core' 
+				'Microdown-RichTextPresenter-Tests' 
+				'NewTools-DocumentBrowser-Tests' );
+			group: 'RichTextPresenter' with: #(
+				'Microdown-RichTextPresenter' 
+				'Microdown-RichTextPresenter-Tests');
+			group: 'GitHubResource' with: #(
+				'NewTools-DocumentBrowser-GitHubResource'
+				'NewTools-DocumentBrowser-GitHubResource-Tests');
 			group: 'Core+Tests' with: #('Core' 'Tests' )
 		]
 ]
