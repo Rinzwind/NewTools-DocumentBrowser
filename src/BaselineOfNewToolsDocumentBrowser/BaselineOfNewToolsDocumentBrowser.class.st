@@ -18,20 +18,15 @@ BaselineOfNewToolsDocumentBrowser >> baseline: spec [
 					loads: #('RichText') ].
 
 		spec
-			baseline: 'Iceberg'
-			with: [ 
-				spec repository: (Smalltalk classNamed: #BaselineOfPharo) iceberg repository ].
-
-		spec
 			package: #'NewTools-DocumentBrowser'
 				with: [ spec requires: #( #'Microdown' ) ];
 			package: #'NewTools-DocumentBrowser-Tests'
 				with: [ spec requires: #( #'NewTools-DocumentBrowser' ) ];
 
 			package: #'NewTools-DocumentBrowser-GitHubResource'
-				with: [ spec requires: #( #'NewTools-DocumentBrowser' #Iceberg) ];
+				with: [ spec requires: #('NewTools-DocumentBrowser') ];
 			package: #'NewTools-DocumentBrowser-GitHubResource-Tests'
-				with: [ spec requires: #( #'NewTools-DocumentBrowser' ) ].
+				with: [ spec requires: #('NewTools-DocumentBrowser') ].
 
 		spec
 			group: 'Core' with: #('NewTools-DocumentBrowser');
