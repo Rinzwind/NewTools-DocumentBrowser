@@ -18,11 +18,6 @@ BaselineOfNewToolsDocumentBrowser >> baseline: spec [
 					loads: #('RichText') ].
 
 		spec
-			baseline: 'Iceberg'
-			with: [ 
-				spec repository: (Smalltalk classNamed: #BaselineOfPharo) iceberg repository ].
-
-		spec
 			package: #'Microdown-RichTextPresenter'
 				with: [ spec requires: #( #Microdown ) ];
 			package: #'Microdown-RichTextPresenter-Tests'
@@ -34,7 +29,7 @@ BaselineOfNewToolsDocumentBrowser >> baseline: spec [
 				with: [ spec requires: #( #'NewTools-DocumentBrowser' ) ];
 
 			package: #'NewTools-DocumentBrowser-GitHubResource'
-				with: [ spec requires: #( #'NewTools-DocumentBrowser' #Iceberg) ];
+				with: [ spec requires: #( #'NewTools-DocumentBrowser') ];
 			package: #'NewTools-DocumentBrowser-GitHubResource-Tests'
 				with: [ spec requires: #( #'NewTools-DocumentBrowser' ) ].
 
