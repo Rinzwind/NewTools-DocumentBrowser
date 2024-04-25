@@ -14,12 +14,13 @@ BaselineOfNewToolsDocumentBrowser >> baseline: spec [
 			baseline: 'Microdown'
 			with: [
 				spec
-					repository: 'github://pillar-markup/Microdown:Pharo12/src';
+					repository: (Smalltalk classNamed: #BaselineOfPharo) microdown repository;
 					loads: #('RichText') ].
 
 		spec
 			baseline: 'Iceberg'
-			with: [ spec repository: 'github://pharo-vcs/Iceberg:Pharo12' ].
+			with: [ 
+				spec repository: (Smalltalk classNamed: #BaselineOfPharo) iceberg repository ].
 
 		spec
 			package: #'Microdown-RichTextPresenter'
