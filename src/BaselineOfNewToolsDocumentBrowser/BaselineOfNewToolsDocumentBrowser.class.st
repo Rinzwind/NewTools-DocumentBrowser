@@ -10,12 +10,6 @@ BaselineOfNewToolsDocumentBrowser >> baseline: spec [
 	<baseline>
 
 	spec for: #'common' do: [
-		spec
-			baseline: 'Microdown'
-			with: [
-				spec
-					repository: (Smalltalk classNamed: #BaselineOfPharo) microdown repository;
-					loads: #('RichText') ].
 
 		spec
 			package: #'Microdown-RichTextPresenter'
